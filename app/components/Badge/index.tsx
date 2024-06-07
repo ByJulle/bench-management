@@ -9,7 +9,7 @@ export enum BadgeType {
 }
 export interface Props {
   children?: ReactElement;
-  label: string;
+  label?: string;
   type: BadgeType;
 }
 
@@ -18,5 +18,9 @@ export default function Badge({
   label,
   children,
 }: Props): ReactElement {
-  return <div className="bg-red-400">{label}</div>;
+  return (
+    <div className="bg-red-400 inline-block px-3 rounded-full">
+      {children || label}
+    </div>
+  );
 }

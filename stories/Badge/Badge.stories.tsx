@@ -1,5 +1,7 @@
 import { StoryObj, Meta } from "@storybook/react";
 import Badge, { BadgeType } from "./../../app/components/Badge";
+import "../../app/styles/tailwind.css";
+
 const meta: Meta<typeof Badge> = {
   component: Badge,
 };
