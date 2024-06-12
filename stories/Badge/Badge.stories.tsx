@@ -8,21 +8,20 @@ const meta: Meta<typeof Badge> = {
 export default meta;
 type Story = StoryObj<typeof Badge>;
 
-
 const getArgTypes = () => {
   return {
     type: {
-        options: ["Primary", "Secondary", "Success", "Warning", "Danger"],
-        mapping: {
-          Primary: BadgeType.PRIMARY,
-          Secondary: BadgeType.SECONDARY,
-          Success: BadgeType.SUCCESS,
-          Warning: BadgeType.WARNING,
-          Error: BadgeType.DANGER,
-        },
+      options: ["Primary", "Secondary", "Success", "Warning", "Danger"],
+      mapping: {
+        Primary: BadgeType.PRIMARY,
+        Secondary: BadgeType.NEUTRAL,
+        Success: BadgeType.SUCCESS,
+        Warning: BadgeType.WARNING,
+        Error: BadgeType.DANGER,
       },
-  }
-}
+    },
+  };
+};
 export const Primary: Story = {
   args: {
     type: BadgeType.PRIMARY,
@@ -31,9 +30,9 @@ export const Primary: Story = {
   argTypes: getArgTypes(),
 };
 
-export const Secondary: Story = {
+export const Neutral: Story = {
   args: {
-    type: BadgeType.SECONDARY,
+    type: BadgeType.NEUTRAL,
     label: "John Doe",
   },
   argTypes: getArgTypes(),
@@ -62,4 +61,3 @@ export const Danger: Story = {
   },
   argTypes: getArgTypes(),
 };
-

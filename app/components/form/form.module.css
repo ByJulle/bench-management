@@ -1,0 +1,22 @@
+@import './../../styles/tailwind.css';
+
+.defaultStyle {
+    @apply  bg-neutral-50 border-2 rounded-md px-3 py-0.5 text-sm transition-all;
+}
+.defaultStyle:focus, :focus-visible{
+    @apply border-primary;
+    outline: none !important;
+    box-shadow: 1px 1px 4px 0px #499DF233;
+    box-shadow: -1px -1px 4px 0px #499DF233;
+}
+
+.errorStyle {
+    @apply border-danger transition-all;
+}
+
+.errorStyle:focus, :focus-visible{
+     @apply border-danger;
+    outline: none !important;
+    box-shadow: 1px 1px 4px 0px #E5172833;
+    box-shadow: -1px -1px 4px 0px #E5172833;
+}

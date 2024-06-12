@@ -21,7 +21,7 @@ module.exports = {
           900: "#0B1926",
         },
         neutral: {
-          50: "#878787",
+          50: "#FAFAFA",
           100: "#F0F0F0",
           200: "#D6D6D6",
           300: "#BDBDBD",
@@ -72,4 +72,9 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /bg-(primary|secondary|success|warning|danger)/,
+    },
+  ],
 };
