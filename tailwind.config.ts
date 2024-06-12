@@ -19,19 +19,19 @@ const config: Config = {
           100: "#D9ECFF",
           200: "#A6D2FF",
           300: "#73B9FF",
-          400: "#499DF2",
+          DEFAULT: "#499DF2",
           500: "#3D85CC",
           600: "#326CA6",
           700: "#224B73",
           800: "#1B3A59",
           900: "#0B1926",
         },
-        neutral: {
+        secondary: {
           50: "#878787",
           100: "#F0F0F0",
           200: "#D6D6D6",
           300: "#BDBDBD",
-          400: "#A8A8A8",
+          DEFAULT: "#A8A8A8",
           500: "#878787",
           600: "#666666",
           700: "#474747",
@@ -43,7 +43,7 @@ const config: Config = {
           100: "#CEF2DD",
           200: "#55F296",
           300: "#55F296",
-          400: "#14CC61",
+          DEFAULT: "#14CC61",
           500: "#11A64F",
           600: "#0D7F3D",
           700: "#0B7336",
@@ -55,7 +55,7 @@ const config: Config = {
           100: "#FFEECC",
           200: "#F2D291",
           300: "#F2BE55",
-          400: "#F2A60C",
+          DEFAULT: "#F2A60C",
           500: "#CC8C0A",
           600: "#A67208",
           700: "#805706",
@@ -67,7 +67,7 @@ const config: Config = {
           100: "#FFE5E5",
           200: "#E59595",
           300: "#E55050",
-          400: "#E51728",
+          DEFAULT: "#E51728",
           500: "#BF1321",
           600: "#990F1B",
           700: "#730C14",
@@ -78,5 +78,10 @@ const config: Config = {
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /bg-(primary|secondary|success|warning|danger)/
+      }
+  ]
 };
 export default config;

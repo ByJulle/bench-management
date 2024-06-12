@@ -5,7 +5,7 @@ export enum BadgeType {
   SECONDARY = "secondary",
   SUCCESS = "success",
   WARNING = "warning",
-  ERROR = "error",
+  DANGER = "danger",
 }
 export interface Props {
   children?: ReactElement;
@@ -18,8 +18,30 @@ export default function Badge({
   label,
   children,
 }: Props): ReactElement {
+
+  const getClassName = (type: BadgeType) => {
+    let color = "";
+    switch (type) {
+      case BadgeType.PRIMARY:
+        color =  'bg-primary-100 text-primary';
+        break;
+      case BadgeType.SECONDARY:
+        color =  'bg-secondary-100 text-secondary';
+        break;
+      case BadgeType.SUCCESS:
+        color =  'bg-success-100 text-success';
+        break;
+      case BadgeType.WARNING:
+        color =  'bg-warning-100 text-warning';
+        break;
+      case BadgeType.DANGER:
+        color = 'bg-danger-100 text-danger';
+        break;
+    }
+    return `inline-block px-3 rounded-full ${color}`;
+  }
   return (
-    <div className="bg-red-400 inline-block px-3 rounded-full">
+    <div className={getClassName(type)}>
       {children || label}
     </div>
   );
