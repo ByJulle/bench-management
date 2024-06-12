@@ -1,7 +1,7 @@
 @import './../../styles/tailwind.css';
 
 .defaultStyle {
-    @apply  bg-neutral-50 border-2 rounded-md px-3 py-0.5 text-sm transition-all;
+    @apply  bg-neutral-50 border-2 rounded-md px-3 py-0.5 text-sm transition-all max-w-64;
 }
 .defaultStyle:focus, :focus-visible{
     @apply border-primary;

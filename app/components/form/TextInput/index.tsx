@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 import styles from "./../form.module.css";
 
 export interface Props {
@@ -6,23 +6,29 @@ export interface Props {
   label: string;
   type: any;
   placeholder?: string;
+  hasError: boolean;
+  errorMessage: string;
+  value: any;
 }
 export default function TextInput({
   id,
+  value = null,
   label,
   placeholder,
+  errorMessage,
+  hasError,
 }: Props): ReactElement {
-  const [inputError] = useState(false);
   return (
     <div className="flex flex-col gap-1">
       <label htmlFor={id}>{label}</label>
       <input
         type="text"
         id={id}
-        className={`${styles.defaultStyle} ${inputError && styles.errorStyle}`}
+        className={`${styles.defaultStyle} ${hasError && styles.errorStyle}`}
         placeholder={placeholder}
+        value={value}
       />
-      {inputError && <p className="text-xs text-danger">Error message</p>}
+      {hasError && <p className="text-xs text-danger">{errorMessage}</p>}
     </div>
   );
 }
