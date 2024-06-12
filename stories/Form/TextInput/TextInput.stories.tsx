@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from "@storybook/react";
-import TextInput from "../../../app/components/form/TextInput";
+import TextInput from "@components/form/TextInput";
 
 const meta: Meta<typeof TextInput> = {
   component: TextInput,
@@ -12,15 +12,19 @@ export const Base: Story = {
     label: "Input",
     id: "username",
     placeholder: "Placeholder",
+    hasError: false,
+    value: undefined,
+    type: "text",
   },
 };
 
 export const Error: Story = {
   args: {
-    label: "This is a label",
+    label: "Invalid input example",
     id: "errorInput",
     value: "Invalid input",
     hasError: true,
-    errorMessage: "Sonmething went wrong",
+    errorMessage: "Something went wrong",
+    type: "text",
   },
 };

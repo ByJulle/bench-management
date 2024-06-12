@@ -1,10 +1,10 @@
-import React, { ReactElement } from "react";
+import React, { HTMLInputTypeAttribute, ReactElement } from "react";
 import styles from "./../form.module.css";
 
 export interface Props {
   id: string;
   label: string;
-  type: any;
+  type: HTMLInputTypeAttribute;
   placeholder?: string;
   hasError: boolean;
   errorMessage: string;
@@ -13,6 +13,7 @@ export interface Props {
 export default function TextInput({
   id,
   value = null,
+  type,
   label,
   placeholder,
   errorMessage,
@@ -22,7 +23,7 @@ export default function TextInput({
     <div className="flex flex-col gap-1">
       <label htmlFor={id}>{label}</label>
       <input
-        type="text"
+        type={type}
         id={id}
         className={`${styles.defaultStyle} ${hasError && styles.errorStyle}`}
         placeholder={placeholder}
