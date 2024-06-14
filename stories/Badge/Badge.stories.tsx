@@ -24,7 +24,7 @@ const getArgTypes = () => {
 export const Primary: Story = {
   args: {
     type: BadgeType.PRIMARY,
-    label: "John Doe",
+    label: "Primary",
   },
   argTypes: getArgTypes(),
 };
@@ -32,7 +32,7 @@ export const Primary: Story = {
 export const Neutral: Story = {
   args: {
     type: BadgeType.NEUTRAL,
-    label: "John Doe",
+    label: "Neutral",
   },
   argTypes: getArgTypes(),
 };
@@ -40,7 +40,7 @@ export const Neutral: Story = {
 export const Success: Story = {
   args: {
     type: BadgeType.SUCCESS,
-    label: "John Doe",
+    label: "Success",
   },
   argTypes: getArgTypes(),
 };
@@ -48,7 +48,7 @@ export const Success: Story = {
 export const Warning: Story = {
   args: {
     type: BadgeType.WARNING,
-    label: "John Doe",
+    label: "Warning",
   },
   argTypes: getArgTypes(),
 };
@@ -56,7 +56,7 @@ export const Warning: Story = {
 export const Danger: Story = {
   args: {
     type: BadgeType.DANGER,
-    label: "John Doe",
+    label: "Danger",
   },
   argTypes: getArgTypes(),
 };
