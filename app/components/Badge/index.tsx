@@ -41,7 +41,7 @@ export default function Badge({
         color = "bg-danger-100 text-danger";
         break;
     }
-    return `inline-block px-3 rounded-full ${color}`;
+    return `inline-block px-2 py-1 rounded-full ${color} text-xs`;
   };
   return <div className={getClassName(type)}>{children || label}</div>;
 }
